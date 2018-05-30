@@ -8,6 +8,7 @@ public class SelectionSort {
 		System.out.println();
 	}
 	
+	//选择排序算法
 	public static void selectionSort(int[] array) {
 		if (array == null || array.length == 0)
 			return;
