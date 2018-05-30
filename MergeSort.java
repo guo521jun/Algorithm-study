@@ -8,6 +8,7 @@ public class MergeSort {
 		System.out.println();
 	}
 	
+	//存在一些问题，StackOverFlowError错误，递归出现问题
 	public static void mergeSort(int[] array) {
 		if (array == null || array.length == 0)
 			return;
