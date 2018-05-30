@@ -8,6 +8,7 @@ public class BubbleSort {
 		System.out.println();
 	}
 	
+	//冒泡排序算法
 	public static void bubbleSort(int[] array) {
 		if (array == null || array.length == 0)
 			return;
