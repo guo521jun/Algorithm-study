@@ -8,7 +8,6 @@ public class MergeSort {
 		System.out.println();
 	}
 	
-	//存在一些问题，StackOverFlowError错误，递归出现问题
 	public static void mergeSort(int[] array) {
 		if (array == null || array.length == 0)
 			return;
@@ -18,13 +17,12 @@ public class MergeSort {
 	public static void mergeSort(int[] array, int low, int high) {
 		if (low >= high)
 			return;
-		int mid = (low + (high-low) >> 1);
+		int mid = low + (high-low) / 2;
 		mergeSort(array, low, mid);
 		mergeSort(array, mid+1, high);
 		merge(array, low, mid, high);
 	}
 	
-	//将两个子数组进行归并
 	public static void merge(int[] array, int low, int mid, int high) {
 		int[] aux = new int[high-low+1];
 		for (int i = low; i <= high; i++)
